@@ -31,9 +31,14 @@ class Square():
 
     @position.setter
     def position(self, value):
-        if not isinstance(value, tuple) or len(value)!= 2:
+        if not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integrers")
-    
+        if not isinstance(value[0], int) or not isinstance(value[1], int):
+            raise TypeError("position must be a tuple of 2 positive integrers")
+        if value[0] < 0 or value[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integrers")
+        self.__position = value
+
     def area(self):
         """Return the current square area."""
         return self.__size ** 2
@@ -42,7 +47,7 @@ class Square():
         """Prints to stdout the square with the character #,
         at the position given by the position attribute.
         """
-        if  self.__size == 0:
+        if self.__size == 0:
             print()
             return
         for x in range(0, self.__position[1]):
