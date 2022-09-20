@@ -22,8 +22,11 @@ Using ``add_integer``
 
         >>> add_integer(25, -4)
         21
-        
+
         >>> add_integer(None)
         Traceback (most recent call last):
         TypeError: a must be an integer
 
+        >>> add_integer(1000e1000)
+        Traceback (most recent call last):
+        OverflowError: cannot convert float infinity to integer
