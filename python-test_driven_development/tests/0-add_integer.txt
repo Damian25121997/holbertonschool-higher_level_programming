@@ -7,18 +7,25 @@ Using ``add_integer``
 
     >>> add_integer(1, 2)
     3
+   
     >>> add_integer(100, -2)
     98
+   
     >>> add_integer(2)
     100
+   
     >>>add_integer(100.3, -2)
     98
+   
     >>> add_integer("Hello")
     Traceback (most recent calll last):
     TypeError: a must be and integer
+   
     >>> add_integer(2, "Hello")
     Traceback (most recent call last):
-    TypeError: b must be an integer
+    TypeError: b must be an add_integer
+    
     >>> add_integer(None)
     Traceback (most recent call last):
     TypeError: a must be an integer
+
