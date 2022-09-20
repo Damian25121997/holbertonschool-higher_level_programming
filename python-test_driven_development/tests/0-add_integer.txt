@@ -17,13 +17,17 @@ Using ``add_integer``
         >>> add_integer(100.3, -2)
         98
 
-        >>> add_integer(4.0, 6.0)
-        10.0
+        >>> add_integer(4, 6)
+        10
 
         >>> add_integer(25, -4)
         21
 
         >>> add_integer(None)
+        Traceback (most recent call last):
+        TypeError: a must be an integer
+
+        >>> add_integer(float'nan')
         Traceback (most recent call last):
         TypeError: a must be an integer
 
