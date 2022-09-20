@@ -8,20 +8,17 @@ Using ``add_integer``
         >>> add_integer(1, 2)
         3
    
-        >>> add_integer(100, -2)
-        98
+        >>> add_integer(5, 2.5)
+        7.5
    
-        >>> add_integer(2,)
-        100
+        >>> add_integer(2, -1)
+        1
    
-        >>> add_integer(100.3, -2)
-        98.3
+        >>> add_integer(-3, -2)
+        -5
 
         >>> add_integer(4.0, 6.0)
         10.0
-
-        >>> add_integer(25, -4)
-        21
 
         >>> add_integer(None)
         Traceback (most recent call last):
