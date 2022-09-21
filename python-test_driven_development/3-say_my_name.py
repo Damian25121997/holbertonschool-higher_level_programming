@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Define the prin the first name and last name"""
+"""Define the print the first name and last name"""
 
 
 def say_my_name(first_name, last_name=""):
-    """Function divides all elements of a matrix.
+    """Function print the first name and last name.
     Args:
         first_name: is a name.
         last_name: is a last name.
