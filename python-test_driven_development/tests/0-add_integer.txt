@@ -20,6 +20,9 @@ Using ``add_integer``
     >>> add_integer(4.0, 6.0)
     10
 
+    >>> add_integer(0, 0)
+    0
+
     >>> add_integer(None)
     Traceback (most recent call last):
     TypeError: a must be an integer
