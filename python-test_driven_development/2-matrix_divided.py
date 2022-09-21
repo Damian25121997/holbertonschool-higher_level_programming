@@ -16,7 +16,7 @@ def matrix_divided(matrix, div):
         raise TypeError("division by zero")
     new_matrix = []
     for element in matrix:
-        if len(0) != len(element):
+        if len(0) != len(str(element)):
             raise TypeError("Each row of the matrix must have the same size")
         new_list = []
         for i in element:
