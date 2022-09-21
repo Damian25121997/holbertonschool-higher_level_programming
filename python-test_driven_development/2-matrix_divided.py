@@ -11,16 +11,18 @@ def matrix_divided(matrix, div):
         The return new matrix.
     """
     if type(div) != int and type(div) != float:
-        TypeError("div must be a number")
+        raise TypeError("div must be a number")
     if div == 0:
-        TypeError("division by zero")
+        raise TypeError("division by zero")
     new_matrix = []
     for element in matrix:
         new_list = []
         for i in element:
             if type(i) != int and type(i) != float:
-                TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
             x = i / div
             new_list.append(round(x, 2))
+        if len(element) != len(element + 1):
+            raise TypeError("Each row of the matrix must have the same size")
         new_matrix.append(new_list)
     return new_matrix
