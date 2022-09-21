@@ -26,4 +26,3 @@ Now:
     Hello
     <BLANKLINE>
     World
-    <BLANKLINE>
