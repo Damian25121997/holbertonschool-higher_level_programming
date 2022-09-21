@@ -9,7 +9,7 @@ Using ``add_integer``
     3
    
     >>> add_integer(5, 2.5)
-    7.5
+    7
   
     >>> add_integer(2, -1)
     1
@@ -18,7 +18,7 @@ Using ``add_integer``
     -5
 
     >>> add_integer(4.0, 6.0)
-    10.0
+    10
 
     >>> add_integer(None)
     Traceback (most recent call last):
