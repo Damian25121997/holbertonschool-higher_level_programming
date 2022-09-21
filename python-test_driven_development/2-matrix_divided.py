@@ -17,13 +17,13 @@ def matrix_divided(matrix, div):
     new_matrix = []
     for element in matrix:
         if type(element) is not list:
-            raise TypeError("matrix must be a matrix (list of lists) of \
-                 integers/floats")
+            raise TypeError("matrix must be a matrix (list of lists) of " +
+                            "integers/floats")
         new_list = []
         for i in element:
             if type(i) is not int and type(i) is not float:
-                raise TypeError("matrix must be a matrix (list of lists) \
-                    of integers/floats")
+                raise TypeError("matrix must be a matrix (list of lists) of " +
+                                "integers/floats")
             x = i / div
             new_list.append(round(x, 2))
         new_matrix.append(new_list)
