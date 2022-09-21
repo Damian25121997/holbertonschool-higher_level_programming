@@ -24,7 +24,5 @@ def matrix_divided(matrix, div):
                 raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
             x = i / div
             new_list.append(round(x, 2))
-        if len(element) != len(element + 1):
-            raise TypeError("Each row of the matrix must have the same size")
         new_matrix.append(new_list)
     return new_matrix
