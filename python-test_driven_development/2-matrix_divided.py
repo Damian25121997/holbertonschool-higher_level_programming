@@ -14,11 +14,10 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise TypeError("division by zero")
-    for r in matrix:
-        if len(0) != len(r):
-            raise TypeError("Each row of the matrix must have the same size")
     new_matrix = []
     for element in matrix:
+        if len(0) != len(element):
+            raise TypeError("Each row of the matrix must have the same size")
         new_list = []
         for i in element:
             if type(i) != int and type(i) != float:
