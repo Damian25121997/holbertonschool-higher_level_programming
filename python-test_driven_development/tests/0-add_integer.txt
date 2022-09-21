@@ -23,6 +23,10 @@ Using ``add_integer``
     >>> add_integer(0, 0)
     0
 
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+    
     >>> add_integer(None)
     Traceback (most recent call last):
     TypeError: a must be an integer
