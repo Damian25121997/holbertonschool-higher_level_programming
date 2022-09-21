@@ -11,9 +11,9 @@ def add_integer(a, b=98):
     Return:
         int: The return value of result of add.
     """
-    if (type(a) != int and type(a) != float) or a != a:
+    if type(a) != int and type(a) != float:
         raise TypeError("a must be an integer")
-    if (type(b) != int and type(b) != float) or b != b:
+    if type(b) != int and type(b) != float:
         raise TypeError("b must be an integer")
     if type(a) is float:
         a = int(a)
