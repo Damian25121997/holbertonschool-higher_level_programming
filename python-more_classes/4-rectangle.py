@@ -2,9 +2,6 @@
 """Define a class Rectangle."""
 
 
-import sre_compile
-
-
 class Rectangle:
     """Class Rectangle that defines a rectangle."""
 
