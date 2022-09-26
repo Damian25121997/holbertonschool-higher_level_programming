@@ -21,6 +21,9 @@ Using ``MyList``
     >>> my_list.print_sorted()
     [1, 2, 4]
 
+    >>> my_list
+    [1, 4, 2]
+
     >>> my_list = MyList([3, 6, 4])
 
     >>> my_list
