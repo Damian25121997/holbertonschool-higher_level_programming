@@ -21,3 +21,31 @@ Using ``BaseGeometry``
     >>> baseGeometry.integer_validator("hola", 0)
     Traceback (most recent call last):
     ValueError: hola must be greater than 0
+
+    >>> baseGeometry.integer_validator()
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> baseGeometry.integer_validator("Hello")
+    Traceback (most recent call last):
+    TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+    >>> baseGeometry.integer_validator("hello", (9,))
+    Traceback (most recent call last):
+    TypeError: hello must be an integer
+
+    >>> baseGeometry.integer_validator("hello", [9])
+    Traceback (most recent call last):
+    TypeError: hello must be an integer
+
+    >>> baseGeometry.integer_validator("hello", True)
+    Traceback (most recent call last):
+    TypeError: hello must be an integer
+
+    >>> baseGeometry.integer_validator("hello", {3, 4})
+    Traceback (most recent call last):
+    TypeError: hello must be an integer
+
+    >>> baseGeometry.integer_validator("hello", None)
+    Traceback (most recent call last):
+    TypeError: hello must be an integer
