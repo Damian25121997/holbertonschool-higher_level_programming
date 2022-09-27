@@ -3,7 +3,7 @@
 
 
 def write_file(filename="", text=""):
-    """Function appends a sstring to a text file"""
+    """Function appends a string to a text file"""
 
     with open(filename, 'a+') as file:
         return file.write(text)
