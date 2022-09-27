@@ -1,9 +1,7 @@
 #!/usr/bin/python3
-"""Function adds all arguments to a Python list,
-and then save them to a file"""
+"""Function adds all arguments to a Python list"""
 
 
-import json
 import sys
 import os.path
 
