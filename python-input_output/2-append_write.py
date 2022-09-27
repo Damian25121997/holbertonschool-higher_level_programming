@@ -2,7 +2,7 @@
 """Function thats appends a string to a text file."""
 
 
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """Function thats appends a string to a text file."""
 
     with open(filename, 'a+') as file:
