@@ -39,7 +39,7 @@ class Square(Rectangle):
 
         if args is not None and len(args) != 0:
             if len(args) >= 1:
-                self.id = [0]
+                self.id = args[0]
             if len(args) > 1:
                 self.size = args[1]
             if len(args) > 2:
