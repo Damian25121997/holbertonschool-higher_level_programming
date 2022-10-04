@@ -3,6 +3,7 @@
 
 
 import json
+from multiprocessing import dummy
 
 
 class Base:
@@ -39,3 +40,12 @@ class Base:
         if json_string is None or json_string == 0:
             return []
         return json.loads(json_string)
+
+    @classmethod
+    def create(cls, **dictionary):
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
