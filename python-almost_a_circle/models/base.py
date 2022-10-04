@@ -3,7 +3,6 @@
 
 
 import json
-from multiprocessing import dummy
 
 
 class Base:
@@ -49,3 +48,13 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        file = cls.__name__ + ".json"
+        try:
+            with open(file, 'r') as f:
+                return [cls.create(**dictionary) for
+                        dictionary in cls.from_json_string(f.read())]
+        except FileNotFoundError:
+            return []
