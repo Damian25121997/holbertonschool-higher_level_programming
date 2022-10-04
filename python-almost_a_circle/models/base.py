@@ -4,6 +4,7 @@
 
 import json
 
+
 class Base:
     """Class Base"""
 
@@ -22,3 +23,13 @@ class Base:
             return "[]"
         if type(list_dictionaries) == list:
             return json.dumps(list_dictionaries)
+
+    @classmethod
+    def save_to_file(cls, list_objs):
+        file = cls.__name__ + ".json"
+        dic = []
+        if list_objs is not None:
+            for i in list_objs:
+                dic.append(cls.to_dictionary(i))
+        with open(file, 'w') as t:
+            t.write(cls.to_json_string(dic))
