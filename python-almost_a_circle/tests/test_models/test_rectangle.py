@@ -2,12 +2,13 @@
 """Test of rectangle class"""
 
 
-import unittest
+from io import StringIO
+from unittest import TestCase, mock
 import json
 from models.rectangle import Rectangle
 
 
-class TestRectangle(unittest.TestCase):
+class TestRectangle(TestCase):
     """Test the funcionality of the rectangle class"""
 
     @classmethod
@@ -103,3 +104,8 @@ class TestRectangle(unittest.TestCase):
         """Test the __str__ method"""
         self.assertEqual(str(self.r1), "[Rectangle] (5) 0/0 - 10/10")
         self.assertEqual(str(self.r2), "[Rectangle] (0) 4/0 - 2/3")
+
+    def test_display_with_x_y(self):
+        with mock.patch('sys.stdout', new=StringIO()) as output1:
+            self.r2.display()
+            self.assertEqual(output1.getvalue(), '    ##\n    ##\n    ##\n')
