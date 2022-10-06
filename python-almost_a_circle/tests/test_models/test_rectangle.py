@@ -36,7 +36,7 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.r1.y, 0)
         self.assertEqual(self.r2.y, 0)
 
-    def test_args_rectangle(self):
+    def test_more(self):
         """Test for functioning more data in the class"""
         self.assertEqual(self.r1.id, 5)
 
@@ -94,3 +94,12 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             r = Rectangle(1, 1, 1, -1)
 
+    def test_area(self):
+        """Test area"""
+        self.assertEqual(self.r1.area(), 100)
+        self.assertEqual(self.r2.area(), 6)
+
+    def test_str(self):
+        """Test the __str__ method"""
+        self.assertEqual(str(self.r1), "[Rectangle] (5) 0/0 - 10/10")
+        self.assertEqual(str(self.r2), "[Rectangle] (0) 4/0 - 2/3")
