@@ -114,3 +114,8 @@ class TestRectangle(TestCase):
         with mock.patch('sys.stdout', new=StringIO()) as output2:
             self.r1.display()
             self.assertEqual(output2.getvalue(), '##########\n##########\n##########\n##########\n##########\n##########\n##########\n##########\n##########\n##########\n')
+
+    def test_to_dictionary(self):
+        d1 = self.r1.to_dictionary()
+        self.assertEqual({"id": 5, "width": 10, "height": 10, "x": 0, "y": 0}, d1)
+        self.assertTrue(type(d1) is dict)
