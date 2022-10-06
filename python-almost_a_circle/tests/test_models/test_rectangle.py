@@ -13,8 +13,8 @@ class TestRectangle(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """setting up class"""
-        cls.r1 = Rectangle(10, 10)
-        cls.r2 = Rectangle(2, 3, 4)
+        cls.r1 = Rectangle(10, 10, 0, 0, 5)
+        cls.r2 = Rectangle(2, 3, 4, 0, 0)
 
     def test_width(self):
         """Testing for functioning width"""
@@ -35,6 +35,10 @@ class TestRectangle(unittest.TestCase):
         """Test for functioning y"""
         self.assertEqual(self.r1.y, 0)
         self.assertEqual(self.r2.y, 0)
+
+    def test_args_rectangle(self):
+        """Test for functioning more data in the class"""
+        self.assertEqual(self.r1.id, 5)
 
     def test_width(self):
         """ width"""
@@ -89,3 +93,4 @@ class TestRectangle(unittest.TestCase):
         """Test ints <= 0 for y"""
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             r = Rectangle(1, 1, 1, -1)
+
