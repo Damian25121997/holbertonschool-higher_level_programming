@@ -105,12 +105,12 @@ class TestRectangle(TestCase):
         self.assertEqual(str(self.r1), "[Rectangle] (5) 0/0 - 10/10")
         self.assertEqual(str(self.r2), "[Rectangle] (0) 4/0 - 2/3")
 
-    def test_display_with_x_y(self):
+    def test_display(self):
         with mock.patch('sys.stdout', new=StringIO()) as output1:
             self.r2.display()
             self.assertEqual(output1.getvalue(), '    ##\n    ##\n    ##\n')
 
-    def test_display(self):
-        with mock.patch('sys.stdout',new=StringIO()) as output2:
-            self.r1.display
-            self.assertEqual(output2.getvalue(),'')
+    def test_dispay2(self):
+        with mock.patch('sys.stdout', new=StringIO()) as output2:
+            self.r1.display()
+            self.assertEqual(output2.getvalue(), '##########\n##########\n##########\n##########\n##########\n##########\n##########\n##########\n##########\n##########\n')
