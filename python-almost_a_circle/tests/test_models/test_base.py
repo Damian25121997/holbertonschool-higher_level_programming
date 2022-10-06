@@ -24,3 +24,19 @@ class TestBase(unittest.TestCase):
         """Testing id as not None"""
         b = Base(98)
         self.assertEqual(b.id, 98)
+
+    def test_to_json_string(self):
+        """Testing regular to json string"""
+        Base._Base__nb_objects = 0
+        d1 = {"id": 9, "width": 5, "height": 6, "x": 7, "y": 8}
+        d2 = {"id": 2, "width": 2, "height": 3, "x": 4, "y": 0}
+        json_s = Base.to_json_string([d1, d2])
+        self.assertTrue(type(json_s) is str)
+        d = json.loads(json_s)
+        self.assertEqual(d, [d1, d2])
+
+    def test_None_to_json_String(self):
+        """testting None to a json"""
+        json_s = Base.to_json_string(None)
+        self.assertTrue(type(json_s) is str)
+        self.assertEqual(json_s, "[]")
