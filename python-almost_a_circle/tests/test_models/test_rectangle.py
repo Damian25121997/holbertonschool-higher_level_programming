@@ -109,3 +109,8 @@ class TestRectangle(TestCase):
         with mock.patch('sys.stdout', new=StringIO()) as output1:
             self.r2.display()
             self.assertEqual(output1.getvalue(), '    ##\n    ##\n    ##\n')
+
+    def test_display(self):
+        with mock.patch('sys.stdout',new=StringIO()) as output2:
+            self.r1.display
+            self.assertEqual(output2.getvalue(),'')
