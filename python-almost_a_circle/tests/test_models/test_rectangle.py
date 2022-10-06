@@ -133,3 +133,10 @@ class TestRectangle(TestCase):
         self.assertEqual(str(r), "[Rectangle] (89) 4/0 - 2/3")
         r.update(89, 2, 3, 4, 5)
         self.assertEqual(str(r), "[Rectangle] (89) 4/5 - 2/3")
+
+    def test_create(self):
+        r = {"id": 5, "width": 10, "height": 10, "x": 0, "y": 0}
+        rc = Rectangle.create(**r)
+        self.assertEqual("[Rectangle] (5) 0/0 - 10/10", str(rc))
+        self.assertIsNot(r, rc)
+        self.assertNotEqual(r, rc)
