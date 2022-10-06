@@ -119,3 +119,17 @@ class TestRectangle(TestCase):
         d1 = self.r1.to_dictionary()
         self.assertEqual({"id": 5, "width": 10, "height": 10, "x": 0, "y": 0}, d1)
         self.assertTrue(type(d1) is dict)
+
+    def test_update(self):
+        r = Rectangle(5, 10, 10, 0, 0)
+        self.assertEqual(str(r), "[Rectangle] (0) 10/0 - 5/10")
+        r.update(89)
+        self.assertEqual(str(r), "[Rectangle] (89) 10/0 - 5/10")
+        r.update(89, 2)
+        self.assertEqual(str(r), "[Rectangle] (89) 10/0 - 2/10")
+        r.update(89, 2, 3)
+        self.assertEqual(str(r), "[Rectangle] (89) 10/0 - 2/3")
+        r.update(89, 2, 3, 4)
+        self.assertEqual(str(r), "[Rectangle] (89) 4/0 - 2/3")
+        r.update(89, 2, 3, 4, 5)
+        self.assertEqual(str(r), "[Rectangle] (89) 4/5 - 2/3")
