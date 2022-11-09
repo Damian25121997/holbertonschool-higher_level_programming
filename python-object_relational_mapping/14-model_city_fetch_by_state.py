@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Deletes all State objects that contain the letter 'a' from the databse"""
+"""Prints all City objects that from the databse"""
 
 
 from model_state import Base, State
